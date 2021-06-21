@@ -1,5 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'on creation' do
+    it 'creates a token' do
+      user = FactoryBot.create(:user)
+      expect(user.encode_token).to eq(JWT.encode({ user_id: user.id }, ENV['JWT_KEY']))
+    end
+  end
 end

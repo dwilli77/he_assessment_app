@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def grab_token
-    @user = User.find_by(email: user_params[:email])
+    @user = User.find_by(username: user_params[:username])
     if @user.present? && @user.authenticate(user_params[:password])
       token = encode_token(user_id: @user.id)
       render json: { token: token }
@@ -24,6 +24,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:email, :name, :password)
+    params.permit(:username, :password)
   end
 end
