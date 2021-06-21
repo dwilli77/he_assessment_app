@@ -9,4 +9,8 @@ class User < ApplicationRecord
   has_many :searches, through: :user_searches
 
   has_many :books
+
+  def encode_token
+    JWT.encode({ user_id: id }, ENV['JWT_KEY'])
+  end
 end
