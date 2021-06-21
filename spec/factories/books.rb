@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :book do
-    user { nil }
-    google_id { "MyString" }
-    title { "MyString" }
-    author { "MyString" }
-    description { "MyText" }
-    image_links { "MyString" }
-    my_rating { 1 }
-    notes { "MyText" }
+    user { association(:user) }
+    sequence(:google_id) { |n| ValidGoogleIds.valid_google_ids[n % 45] }
+
+    trait :with_rating do
+      my_rating { 5 }
+    end
   end
 end
