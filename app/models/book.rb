@@ -11,4 +11,15 @@ class Book < ApplicationRecord
   scope :date_ordered, -> { order(created_at: :desc) }
   scope :rating_ordered, -> { order(my_rating: :desc, created_at: :desc) }
   scope :rated, -> { where.not(my_rating: nil) }
+
+  def add_google_data
+    google_book = GoogleBooks.call(search_term: google_id)
+    throw :abort unless google_book[:body]
+
+    selected_book = google_book[:body].first
+    self.title = selected_book[:title]
+    self.author = selected_book[:author]
+    self.description = selected_book[:description]
+    self.image_links = selected_book[:image_links]
+  end
 end
