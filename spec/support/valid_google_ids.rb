@@ -47,7 +47,12 @@ module ValidGoogleIds
       'CehFAQAAQBAJ',
       'A_-zBAAAQBAJ',
       'Hn41AgAAQBAJ',
-      'JZpeDwAAQBAJ'
+      'JZpeDwAAQBAJ',
+      'FtQzvJEjXmEC',
+      'BG3SjVi5AvAC',
+      'jBtDSf1VzQkC',
+      'rmEIDAAAQBAJ',
+      '0ZJQSnRzcCYC'
     ]
   end
 end
