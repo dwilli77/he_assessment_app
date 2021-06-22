@@ -4,8 +4,8 @@ This project uses the [Google Books API](https://developers.google.com/books) to
 
 ### Specifications
 
-- Ruby 2.6.3
-- Rails 5.2.1
+- Ruby 2.7.3
+- Rails 5.2.6
 - RSPEC
 - Faraday
 - JWT (Token Based Authentication)
