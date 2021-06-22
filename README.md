@@ -47,7 +47,7 @@ Search for a book using a GET REQUEST TO `/query` with a `search_term` parameter
 Example
 
 ```sh
-  localhost:3000/query?search_term=dune
+  https://nameless-ravine-82553.herokuapp.com/query?search_term=dune
 ```
 
 You'll get 10 results from the [Google Books API](https://developers.google.com/books).
