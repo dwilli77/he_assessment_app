@@ -2,6 +2,8 @@
 
 This project uses the [Google Books API](https://developers.google.com/books) to query for books, and you can add them to your library.
 
+The base url for this application is: `https://nameless-ravine-82553.herokuapp.com`
+
 ### Specifications
 
 - Ruby 2.7.3
