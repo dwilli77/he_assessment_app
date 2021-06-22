@@ -32,7 +32,7 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate_token!
-    puts request.headers
+    puts request.headers['Authorization']
     unless logged_in?
       render json: { message: 'Not Authorized' }, status: :unauthorized
     end
